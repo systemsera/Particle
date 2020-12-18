@@ -3,11 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Particle Demo App</title>
+    <title>Car - o - Meter</title>
 </head>
 <body>
-    <p>This is a demo app.</p>
-    <p><a href="/cloud_demo.html">Cloud demo (event, variables, functions)</a></p>
-    <p><a href="/events.html">Events</a></p>
+    <div id="app">
+    <h2 style="text-align: center; padding-left: 80px;"><strong>Car - o - Meter</strong></h2>
+    <h2 style="text-align: center; padding-left: 80px;"><strong>Cool Insurance Co.</strong></h2>
+    <h2 style="padding-left: 80px;">&nbsp;</h2>
+    <p style="padding-left: 80px;"><strong>Your current premium rating</strong></p>
+    <table style="border-collapse: collapse; width: 41.4095%; height: 21px; margin-left: 80px;" border="1">
+    <tbody style="padding-left: 80px;">
+    <tr style="padding-left: 80px;">
+    <td style="width: 50%; padding-left: 80px;">{{ score }}</td>
+    <td style="width: 50%; text-align: center; padding-left: 80px;">{{ standing }}</td>
+    </tr>
+    </tbody>
+    </table>
+    <p style="padding-left: 80px;">&nbsp;</p>
+    <p style="padding-left: 80px;"><strong>Last Ride Log</strong></p>
+    <table style="border-collapse: collapse; width: 100%; height: 108px; margin-left: 80px;" border="1">
+    <tbody style="padding-left: 80px;">
+    <tr style="height: 18px; padding-left: 80px;">
+    <td style="width: 50%; height: 18px; padding-left: 80px;"><strong>Event</strong></td>
+    <td style="width: 50%; height: 18px; padding-left: 80px;"><strong>Value</strong></td>
+    </tr>
+    <tr style="height: 18px; padding-left: 80px;">
+    <td style="width: 50%; height: 18px; padding-left: 80px;">{{ xEvName }}</td>
+    <td style="width: 50%; height: 18px; padding-left: 80px;">{{ xAccel }}</td>
+    </tr>
+    <tr style="height: 18px; padding-left: 80px;">
+    <td style="width: 50%; height: 18px; padding-left: 80px;">{{ yEvName }}</td>
+    <td style="width: 50%; height: 18px; padding-left: 80px;">{{ yAccel }}</td>
+    </tr>
+    <tr style="height: 18px; padding-left: 80px;">
+    <td style="width: 50%; height: 18px; padding-left: 80px;">{{ zEvName }}</td>
+    <td style="width: 50%; height: 18px; padding-left: 80px;">{{ zAccel }}</td>
+    </tr>
+    <tr style="height: 18px; padding-left: 80px;">
+    <td style="width: 50%; height: 18px; padding-left: 80px;">&nbsp;</td>
+    <td style="width: 50%; height: 18px; padding-left: 80px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 18px; padding-left: 80px;">
+    <td style="width: 50%; height: 18px; padding-left: 80px;">&nbsp;</td>
+    <td style="width: 50%; height: 18px; padding-left: 80px;">&nbsp;</td>
+    </tr>
+    </tbody>
+    </table>
+    <p style="padding-left: 80px;">&nbsp;</p>
+
+    </div>
+
+    <p style="padding-left: 80px;"><strong>Levels</strong></p>
+    <table style="border-collapse: collapse; width: 54.5315%; height: 100px; margin-left: 80px;" border="1">
+    <tbody>
+    <tr style="height: 100px;">
+    <td style="width: 50%; height: 46px; text-align: center;">100</td>
+    <td style="width: 50%; height: 46px; text-align: center;"><strong>Perfect</strong></td>
+    </tr>
+    <tr style="height: 100px;">
+    <td style="width: 50%; height: 35px; text-align: center;">80</td>
+    <td style="width: 50%; height: 35px; text-align: center;"><strong>Average</strong></td>
+    </tr>
+    <tr style="height: 100px;">
+    <td style="width: 50%; height: 32px; text-align: center;">75</td>
+    <td style="width: 50%; height: 32px; text-align: center;"><strong>Increase Imminent</strong></td>
+    </tr>
+    <tr style="height: 100px;">
+    <td style="width: 50%; height: 18px; text-align: center;">55</td>
+    <td style="width: 50%; height: 18px; text-align: center;"><strong>Premium Increase</strong></td>
+    </tr>
+    <tr style="height: 100px;">
+    <td style="width: 50%; height: 37px; text-align: center;">Below</td>
+    <td style="width: 50%; height: 37px; text-align: center;"><strong>Loss of Coverage</strong></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="events.js"></script>
 </body>
 </html>

@@ -62,6 +62,9 @@ for (let device of devices) {
     
     source.addEventListener('buttonStateChanged', eventListeners.handleButtonStateChanged)
     source.addEventListener('Your Total Score:', eventListeners.handleSendStats)
+    source.addEventListener('Your X Acceleration Score:', eventListeners.handleXAccel)
+    source.addEventListener('Your Y Acceleration Score:', eventListeners.handleYAccel)
+    source.addEventListener('Your Z Acceleration Score:', eventListeners.handleZAccel)
 
     /////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////

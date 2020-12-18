@@ -40,6 +40,54 @@ function handleSendStats (event) {
     sendData("Your Total Score:", data, evDeviceId, evTimestamp );
 }
 
+function handleXAccel (event) {
+    // read variables from the event
+    let ev = JSON.parse(event.data);
+    let evData = ev.data; // the data from the argon event: "started blinking" or "stopped blinking"
+    let evDeviceId = ev.coreid; // the device id
+    let evTimestamp = Date.parse(ev.published_at); // the timestamp of the event
+
+    // the data we want to send to the clients
+    let data = {
+        message: evData, // just forward "started blinking" or "stopped blinking"
+    }
+
+    // send data to all connected clients
+    sendData("Your X Acceleration Score:", data, evDeviceId, evTimestamp );
+}
+
+function handleYAccel (event) {
+    // read variables from the event
+    let ev = JSON.parse(event.data);
+    let evData = ev.data; // the data from the argon event: "started blinking" or "stopped blinking"
+    let evDeviceId = ev.coreid; // the device id
+    let evTimestamp = Date.parse(ev.published_at); // the timestamp of the event
+
+    // the data we want to send to the clients
+    let data = {
+        message: evData, // just forward "started blinking" or "stopped blinking"
+    }
+
+    // send data to all connected clients
+    sendData('Your Y Acceleration Score:', data, evDeviceId, evTimestamp );
+}
+
+function handleZAccel (event) {
+    // read variables from the event
+    let ev = JSON.parse(event.data);
+    let evData = ev.data; // the data from the argon event: "started blinking" or "stopped blinking"
+    let evDeviceId = ev.coreid; // the device id
+    let evTimestamp = Date.parse(ev.published_at); // the timestamp of the event
+
+    // the data we want to send to the clients
+    let data = {
+        message: evData, // just forward "started blinking" or "stopped blinking"
+    }
+
+    // send data to all connected clients
+    sendData('Your Y Acceleration Score:', data, evDeviceId, evTimestamp );
+}
+
 // react on the "buttonStateChanged" Event
 function handleButtonStateChanged (event) {
     // read variables from the event
@@ -110,3 +158,6 @@ exports.sse = null;
 exports.handleBlinkingStateChanged = handleBlinkingStateChanged;
 exports.handleButtonStateChanged = handleButtonStateChanged;
 exports.handleSendStats = handleSendStats;
+exports.handleXAccel = handleXAccel;
+exports.handleYAccel = handleYAccel;
+exports.handleZAccel = handleZAccel;
